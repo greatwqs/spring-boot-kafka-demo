@@ -19,9 +19,6 @@ package com.springkafka.app2;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import com.springkafka.CommonConfiguration;
-import com.springkafka.ConfigProperties;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -33,12 +30,15 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 
+import com.springkafka.CommonConfiguration;
+import com.springkafka.ConfigProperties;
+
 /**
  * @author Gary Russell
  *
  */
 @SpringBootApplication
-@Import({ CommonConfiguration.class, ConfigProperties.class })
+@Import({CommonConfiguration.class, ConfigProperties.class})
 @EnableKafka
 public class S1pKafkaApplication {
 
